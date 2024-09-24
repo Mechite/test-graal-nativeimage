@@ -1,0 +1,17 @@
+Test for GraalVM Native Image supporting Java Modules + ServiceLoader,
+using the module-info.java to define the services and usages, rather than
+using META-INF/services/* to define them.
+
+============================================================================
+
+This has been tested to work on an old variant of GraalVM CE 11, and not
+working on the current latest Oracle GraalVM 21 (as of 24/09/2024).
+
+ServiceLoader support for module-info has been broken.
+
+============================================================================
+
+Build with `mvn package` and then run `build-native-image` to make a test program.
+Modify the script if you want to change the version of native-image you are testing against.
+
+bash script was provided for convenience, was never tested
